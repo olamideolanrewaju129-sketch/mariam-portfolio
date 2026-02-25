@@ -59,3 +59,28 @@ document.querySelectorAll(".fill").forEach((bar) => {
   );
   observer.observe(bar.parentElement.parentElement);
 });
+
+// WhatsApp Contact Form
+document.querySelector(".contact-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.querySelector('input[placeholder="Your Name"]').value;
+  const email = document.querySelector('input[placeholder="Your Email"]').value;
+  const message = document.querySelector('textarea').value;
+
+  const whatsappNumber = "2349136308934";
+  const text = `Hi Mariam, I'm ${name} (${email}). %0A%0A${message}`;
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappUrl, "_blank");
+});
+
+// Hire Me Button WhatsApp
+document.querySelector(".hire-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const whatsappNumber = "2349136308934";
+  const text = "Hi Mariam, I'm interested in hiring you for a project!";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, "_blank");
+});
