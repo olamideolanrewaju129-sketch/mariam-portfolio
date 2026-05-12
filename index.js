@@ -1,7 +1,7 @@
 AOS.init({ duration: 1200, once: true });
 
 // Typing Effect
-const roles = ["Frontend Developer", "UI/UX Designer"];
+const roles = ["Frontend Developer"];
 let i = 0,
   j = 0,
   current = "",
